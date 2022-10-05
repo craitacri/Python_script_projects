@@ -1,24 +1,31 @@
+#need to reorganize and rename folder from stucture:
+# machine make x\product make y\ product number\22.x.pdf CHANGE TO:
+# TO-product make-machine make\T-product number\calcdata\22.x.pdf
+# should also copy files to the new location structure
+
 import os
 import shutil
 import time
+a=os.getcwd()
+b=os.listdir()
+os.chdir("C:\\Users\\coman\\Documents\\GitHub\\Python_script_projects\\Folderprojec")
+c=os.listdir()
 #base directory and machine forler for my trials
+
 # base_dir="C:\\Users\\coman\\Documents\\GitHub\\Python_script_projects\\Folderprojec"
 # machinedir ="machine make 2"
 base_dir=input("Please paste the working directory with double slash format: ")
 machinedir=input("Please paste the machine directory you want to extract: ")
- 
 print(base_dir)
 print(machinedir)
 
-time.sleep(15)
+time. sleep(15)
 slash='\\'
 parent=[]
 for folder , sub_folders , files in os.walk(machinedir):
     print("Currently looking at folder: "+ folder)
-    time.sleep(15)
     print('\n')
     print("THE SUBFOLDERS ARE: ")
-    time.sleep(15)
     if slash in folder:
         for sub_fold in sub_folders:
             print("\t Subfolder: "+sub_fold )
@@ -56,4 +63,4 @@ for folder , sub_folders , files in os.walk(machinedir):
         #shutil.move(f,lastcreateddir)
     print('\n')
 print("Files moved!")
-time.sleep(15)
+time. sleep(15)
